@@ -1,0 +1,109 @@
+﻿@model IEnumerable<MyMvcProject.Models.Table.sys_user>
+
+@{
+    ViewBag.Title = "GetSysUser";
+}
+
+<h2>GetSysUser</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateSysUser")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.user_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.login_name)
+        </th>
+        @*
+        <th>
+            @Html.DisplayNameFor(model => model.login_pwd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.login_salt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_change_pwd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updated_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.report_lang)
+        </th>
+            *@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.user_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.login_name)
+        </td>
+@*
+    <td>
+        @Html.DisplayFor(modelItem => item.login_pwd)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.login_salt)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.is_enabled)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.is_change_pwd)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.created_at)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.updated_at)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.report_lang)
+    </td>
+*@
+        <td>
+            @Html.ActionLink("Edit", "EditSysUser", new { id=item.id }) |
+            @Html.ActionLink("Details", "DetailsSysUser", new { id=item.id }) |
+            @Html.ActionLink("Delete", "DeleteSysUser", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
